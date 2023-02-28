@@ -6,7 +6,9 @@ data class User(
     val firstName: String,
     val lastName: String,
     val email: String,
-    val phoneNumber: String?
+    val phoneNumber: String?,
+    val vehicle: List<Vehicle>,
+    val trips: List<Trip>
 ) {
     fun toUserEntity() = UserEntity(
         firstName = this.firstName,

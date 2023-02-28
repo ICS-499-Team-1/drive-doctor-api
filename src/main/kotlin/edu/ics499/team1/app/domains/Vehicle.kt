@@ -4,6 +4,7 @@ import edu.ics499.team1.app.entities.UserEntity
 import edu.ics499.team1.app.entities.VehicleEntity
 
 data class Vehicle(
+    val userId: Int,
     val name: String,
     val year: Int,
     val make: String,
@@ -12,8 +13,7 @@ data class Vehicle(
     val odometer: Int,
     val licensePlateNumber: String?,
     val vin: String?,
-    val deactivated: Boolean = false,
-    val userId: Int
+    val deactivated: Boolean = false
 ) {
     fun toVehicleEntity(userReference: UserEntity) = VehicleEntity(
         name = this.name,
